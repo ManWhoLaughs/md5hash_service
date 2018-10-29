@@ -10,23 +10,25 @@
 
 Чтобы всё работало, надо установить сервер Redis
 
-> wget http://download.redis.io/redis-stable.tar.gz
+> ***wget http://download.redis.io/redis-stable.tar.gz ***
 >
-> tar xvzf redis-stable.tar.gz
+> ***tar xvzf redis-stable.tar.gz***
 >
-> cd redis-stable
+> ***cd redis-stable***
 >
-> make
+> ***make***
 >
-> sudo make install
+> ***sudo make install***
 
 Оба модуля для Flask, RQ и Redis
-'''python
-pip install flask
-pip install flask-mail
-pip install rq
-pip install redis
-'''
+
+> ***pip install flask***
+>
+> ***pip install flask-mail***
+>
+> ***pip install rq***
+>
+> ***pip install redis***
 
 Всё остальное описано в requirements.txt
 

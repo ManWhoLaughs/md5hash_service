@@ -15,8 +15,8 @@ def run_sql(query):
     connection.close()
     return res
 
-# Скачивать будем в потоке по 4кб,
-# вдруг кто-то захочет всю Игру Престолов в Blu-ray посчитать
+# I use streaming download with 4Kb chunks,
+# in case of someone decide to hash full Game of Thrones in Blu-ray
 def md5_sum(f):
     hash_md5 = md5()
     for chunk in f.iter_content(4096):

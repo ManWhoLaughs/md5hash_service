@@ -23,7 +23,7 @@
 >
 > ***sudo make install***
 
-Оба модуля для Flask, RQ и Redis
+И все перечисленные модули для python
 
 > ***pip install flask***
 >

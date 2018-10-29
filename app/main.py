@@ -6,14 +6,14 @@ import requests
 import os
 import sqlite3
 
-# Чтобы было хоть что-то
+# Just for lulz
 @app.route('/')
 def main_page():
     return 'Hello, md5-World!'
 
-# Валидировать приходящие URL и id не будем, в предположении,
-# что приложение корпоративное и каналы доверенные
-# (ну и чтобы не страдать с кучей проверок)
+# Don't doing URL and email validation in the light of
+# assumption that app is internal corporate and all channels are trusted
+# (and for not to suffer with tons of checks)
 
 @app.route('/check', methods=['GET'])
 def get_task():

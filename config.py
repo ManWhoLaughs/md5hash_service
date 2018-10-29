@@ -1,0 +1,9 @@
+SECRET_KEY = 'some_secret_key'
+MAIL_SERVER = 'smtp.googlemail.com'
+MAIL_PORT = 465
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
+MAIL_USERNAME = 'veryveryuniquemail@gmail.com'
+MAIL_PASSWORD = 'admin1234admin'
+ADMINS = ['veryveryuniquemail@gmail.com']
+REDIS_URL = 'redis://'

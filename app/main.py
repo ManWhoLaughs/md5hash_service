@@ -22,12 +22,12 @@ def get_task():
         abort(400)
     task_info = run_sql("SELECT * FROM tasks WHERE id = \"%s\";" % task_id)
     if (len(task_info) == 0):
-        return jsonify({ "status" : "not exist" })
+        return jsonify({ "status" : "not exist" }), 404
     elif task_info[0][3] == 0:
-        return jsonify({ "status" : "running" })
+        return jsonify({ "status" : "running" }), 200
     elif task_info[0][3] == -1:
-        return jsonify({ "status" : "error" })
-    return jsonify({"md5" : task_info[0][1], "url" : task_info[0][2], "status" : "done"})
+        return jsonify({ "status" : "error" }), 500
+    return jsonify({"md5" : task_info[0][1], "url" : task_info[0][2], "status" : "done"}), 200
 
 
 @app.route('/submit', methods=['POST'])

@@ -18,7 +18,7 @@ def main_page():
 @app.route('/check', methods=['GET'])
 def get_task():
     task_id = request.args.get('id')
-    if (task_id == None):
+    if (task_id == None || len(task_id) >= 256):
         abort(400)
     task_info = run_sql("SELECT * FROM tasks WHERE id = \"%s\";" % task_id)
     if (len(task_info) == 0):
@@ -35,7 +35,7 @@ def create_task():
     if (len(request.form) == 0):
         abort(400)
     url = request.form.get('url')
-    if (url == None):
+    if (url == None || len(url) >= 256):
         abort(400)
     email = request.form.get('email')
     token = queue.enqueue(run_task, url, email)
